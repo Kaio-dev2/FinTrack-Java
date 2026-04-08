@@ -1,12 +1,18 @@
 package com.fintrack.fintrack.model;
 
+// Aqui temos a importação de Get e Set automáticos do Lombok
+
 import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
 
-@Getter
-@Setter
+// Importei essa bíblioteca para ter o valor correto do saldo
+
+@Getter//declarei aqui o lembok get
+@Setter// e aqui o set
+
+
 public class User {
 
     private String nome;
