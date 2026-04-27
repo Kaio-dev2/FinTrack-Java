@@ -1,5 +1,6 @@
 package com.fintrack.fintrack.controller;
 
+import com.fintrack.fintrack.model.User;
 import  com.fintrack.fintrack.service.UserService;
 import org.springframework.stereotype.Controller;
 
