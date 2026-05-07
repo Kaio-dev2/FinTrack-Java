@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 //@PostMapping = mapeia requisições POST (enviar formulário)
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.ui.Model;
 
 @Controller
 // Marca a classe como Controler - Spring passa a gerencia-lo
@@ -30,10 +31,10 @@ public class UserController {
     // @GetMapping = quando o usuário ACESSAR essa URL no navegador
     // "/usuarios/novo" = http://localhost:8081/usuarios/novo
     @GetMapping("/usuarios/novo")
-    public String mostrarFormulario(){
-        // Retorna o NOME DO ARQUIVO HTML dentro de resources/templates
-        // "usuarios/novo" aponta para templates/usuarios/novo.html
-        // O Thymeleaf procura esse arquivo e envia para o navegador
+    public String mostrarFormulario(Model model){
+        // passa um User vazio para o formulário
+        // o Thymeleaf usa esse objeto para mapear os th:field
+        model.addAttribute("user",new User());
         return "usuarios/novo";
         //Retorna o nome do HTML
     }

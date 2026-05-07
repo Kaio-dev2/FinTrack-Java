@@ -1,0 +1,33 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Cadastro de Usuário</title>
+</head>
+<body>
+
+    <h1>Cadastrar Usuário</h1>
+
+    <!-- th:action = URL para onde o formulário envia os dados -->
+    <!-- equivale ao action do HTML puro, mas o Thymeleaf processa a URL -->
+
+    <form th:action="@{/usuarios/cadastrar}" th:object="${user}" method="post">
+    <!-- th:object = objeto Java que esse formulário representa -->
+    <!-- diz ao Thymeleaf: os campos desse form pertencem ao User -->
+        th:object="${user}"
+        method="post">
+
+
+    <!-- th:field = conecta o input com o atributo do objeto -->
+    <!-- *{nome} = pega o campo "nome" do objeto User definido no th:object -->
+    <!-- o * é atalho para referenciar o objeto do th:object -->
+        <input type="text" th:field="*{nome}" placeholder="Nome" />
+
+        <input type="email" th:field="*{email}" placeholder="Email" />
+
+        <input type="password" th:field="*{senha}" placeholder="Senha" />
+
+        <button type="submit" >Cadastrar</button>
+
+    </form>
+</body>
+</html>
