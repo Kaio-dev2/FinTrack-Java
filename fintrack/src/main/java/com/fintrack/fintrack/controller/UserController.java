@@ -46,7 +46,7 @@ public class UserController {
         userService.salvar(user);
         // Após salvar, redireciona para a lista de usuários
         // "redirect:" diz ao Spring para ir para outra URL
-        return "redirect/cadastrar";
+        return "redirect:/usuarios/novo";
         // Recebe os dados e salva
     }
     // Método interno que delega o salvamento para o Service
