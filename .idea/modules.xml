@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/FinTrack-Java.iml" filepath="$PROJECT_DIR$/.idea/FinTrack-Java.iml" />
-      <module fileurl="file://$PROJECT_DIR$/fintrack/fintrack.iml" filepath="$PROJECT_DIR$/fintrack/fintrack.iml" />
     </modules>
   </component>
 </project>
