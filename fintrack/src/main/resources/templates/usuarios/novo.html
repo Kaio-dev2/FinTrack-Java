@@ -12,11 +12,7 @@
 
     <form th:action="@{/usuarios/cadastrar}" th:object="${user}" method="post">
     <!-- th:object = objeto Java que esse formulário representa -->
-    <!-- diz ao Thymeleaf: os campos desse form pertencem ao User -->
-        th:object="${user}"
-        method="post">
-
-
+    <!-- diz ao Thymeleaf: os campos desse form pertencem ao User --
     <!-- th:field = conecta o input com o atributo do objeto -->
     <!-- *{nome} = pega o campo "nome" do objeto User definido no th:object -->
     <!-- o * é atalho para referenciar o objeto do th:object -->
